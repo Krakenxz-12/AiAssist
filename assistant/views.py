@@ -10,6 +10,7 @@ from django.shortcuts import render
 from django.views.decorators.http import require_POST
 from google import genai
 from google.genai import errors, types
+from functools import lru_cache
 
 # Load .env from the project root (the folder that contains manage.py)
 load_dotenv(Path(__file__).resolve().parent.parent / ".env")
@@ -22,10 +23,9 @@ SYSTEM_PROMPT = (
 # Tried in order. If one is overloaded or unavailable, the next is used.
 MODELS = ["gemini-3.8-flash", "gemini-3.5-flash-lite"]
 
-
+@lru_cache(maxsize=1)
 def get_client():
     return genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
-
 
 def generate_reply(prompt):
     last_error = None
