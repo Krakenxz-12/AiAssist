@@ -1,6 +1,6 @@
 {% load static %}
 {
-  "name": "AIvanTill Assistant",
+  "name": "AIvanTill",
   "short_name": "AIvanTill",
   "description": "A class AI assistant powered by Gemini.",
   "start_url": "/",
