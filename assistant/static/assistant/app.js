@@ -13,7 +13,7 @@ function updateOnlineStatus() {
   sendBtn.disabled = !online;
   document.querySelectorAll(".chip").forEach((c) => (c.disabled = !online));
   promptBox.placeholder = online
-    ? "Ask a question for class..."
+    ? "Ask a question..."
     : "You're offline. Reconnect to ask a question.";
 }
 
@@ -25,7 +25,7 @@ function addMessage(text, who, isError = false) {
   const label = document.createElement("div");
   label.className = "label" + (who === "user" ? " user" : "");
   const time = new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
-  label.textContent = who === "user" ? `YOU (STUDENT) · ${time}` : `CLASS ASSISTANT · ${time}`;
+  label.textContent = who === "user" ? `YOU (STUDENT) · ${time}` : `IVAN · ${time}`;
 
   const bubble = document.createElement("div");
   bubble.className = `bubble ${who}` + (isError ? " error" : "");
