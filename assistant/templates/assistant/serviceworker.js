@@ -5,7 +5,7 @@ const PRECACHE = [
   "/",
   "{% static 'assistant/style.css' %}",
   "{% static 'assistant/app.js' %}",
-  "{% static 'assistant/icons/ivantill.png' %}",
+  "{% static 'assistant/icons/icon-192.png' %}",
   "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css",
   "https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js",
   "https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js",
