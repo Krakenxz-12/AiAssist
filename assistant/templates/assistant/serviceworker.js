@@ -1,5 +1,5 @@
 {% load static %}
-const CACHE = "ai-assistant-v4";   // bump this (v2, v3...) whenever you change cached files
+const CACHE = "ai-assistant-v5";   // bump this (v2, v3...) whenever you change cached files
 
 const PRECACHE = [
   "/",
